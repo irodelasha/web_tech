@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Text Analyzer</title>
+
+    <style>
+      h2 {
+        text-align: center;
+      }
+
+      .box {
+        width: 400px;
+        margin: auto;
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      textarea {
+        width: 380px;
+        height: 120px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 5px 10px;
+      }
+
+      .result {
+        margin-top: 15px;
+        border: 1px solid gray;
+        padding: 10px;
+      }
+    </style>
+
+    <script>
+      console.log("Text Analyzer Connected");
+
+      function analyzeText() {
+        const text = document.getElementById("inputText").value;
+
+        // check empty input
+        if (!text) {
+          document.getElementById("result").innerHTML =
+            "Please enter some text!";
+          return;
+        }
+
+        // Character count
+        const charCount = text.length;
+
+        // Word count (handle multiple spaces)
+        const words = text.trim().split(" ");
+        let wordCount = 0;
+
+        for (let i = 0; i < words.length; i++) {
+          if (words[i] != "") {
+            wordCount++;
+          }
+        }
+
+        // Reverse text
+        const reversedText = text.split("").reverse().join("");
+
+        // Show result
+        document.getElementById("result").innerHTML =
+          "Total Characters: " +
+          charCount +
+          "<br/>Total Words: " +
+          wordCount +
+          "<br/>Reversed Text: " +
+          reversedText;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Text Analyzer Tool</h2>
+
+    <div class="box">
+      <textarea
+        id="inputText"
+        placeholder="Enter your paragraph here..."
+      ></textarea>
+
+      <br />
+
+      <button onclick="analyzeText()">Analyze Text</button>
+
+      <div id="result" class="result"></div>
+    </div>
+  </body>
+</html>

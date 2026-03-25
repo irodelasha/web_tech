@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form Validation</title>
+
+    <script>
+      console.log("connected");
+
+      let wrongCount = 0;
+
+      function collectFormData() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        console.log("Printing given values...");
+        console.log(email);
+        console.log(password);
+
+        let error = "";
+
+        if (!email){
+            error = "Email is required";
+        }
+        else if (!email.includes("@")){
+            error = "Email must contai @"
+        }
+        else if (!password){
+
+            error = "password is required"
+
+        }
+        else if (password.length<6){
+            error = "pass must contain 6 characters";
+
+        }
+           else if (!password.includes("#")) {
+          error = "Pass must contain #";
+        }
+        if (error !== "") {
+          wrongCount++;
+          document.getElementById("emailErr").innerHTML = error;
+          document.getElementById("countErr").innerHTML =
+            "Wrong submission count: " + wrongCount;
+          return false;
+        }
+
+        document.getElementById("emailErr").innerHTML = "";
+        document.getElementById("countErr").innerHTML = "";
+
+        alert("Login Successful");
+        return true;
+      }
+
+      function getEmail() {
+        const email = document.getElementById("email").value;
+        console.log(email);
+      }
+
+      function getPassword() {
+        const password = document.getElementById("password").value;
+        console.log(password);
+      }
+    </script>
+  </head>
+
+  <body>
+    <script>
+      document.write("<h1>Login Form</h1>");
+    </script>
+
+    <form onsubmit="return collectFormData();">
+      <table>
+        <tr>
+          <td>Student Email <span style="color: red">*</span></td>
+          <td>
+            <input
+              type="text"
+              placeholder="Enter your email"
+              id="email"
+              onchange="return getEmail();"
+            />
+          </td>
+          <td>
+            <p id="emailErr" style="color: red"></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Password</td>
+          <td>
+            <input
+              type="text"
+              placeholder="Enter your password"
+              id="password"
+              onkeyup="return getPassword();"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <p id="countErr" style="color: red"></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
