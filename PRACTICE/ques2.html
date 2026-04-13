@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uppercase Username</title>
+
+    <script>
+        function convertUpper() {
+            let username = document.getElementById("uname");
+
+            // Convert to uppercase while typing
+            username.value = username.value.toUpperCase();
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Username Form</h2>
+
+    <form>
+        Username:
+        <input type="text" id="uname" onkeyup="convertUpper()"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
