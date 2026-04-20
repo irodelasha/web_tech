@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management</title>
+
+    <script>
+        function addBook() {
+            let title = document.getElementById("title").value.trim();
+            let year = document.getElementById("year").value.trim();
+
+            // Validation: empty check
+            if (title === "" || year === "") {
+                alert("Fields must not be empty!");
+                return false;
+            }
+
+            // Validation: title only alphabets (no number, space, special char)
+            let pattern = /^[A-Za-z]+$/;
+            if (!pattern.test(title)) {
+                alert("Title must contain only alphabets (no numbers, spaces, special characters)");
+                return false;
+            }
+
+            // Add data to table
+            let table = document.getElementById("bookTable");
+            let row = table.insertRow(-1);
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+
+            cell1.innerHTML = title;
+            cell2.innerHTML = year;
+
+            // Clear inputs
+            document.getElementById("title").value = "";
+            document.getElementById("year").value = "";
+
+            return false; // prevent page reload
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Library Management System</h2>
+
+    <form onsubmit="return addBook()">
+        Book Title:
+        <input type="text" id="title"><br><br>
+
+        Publication Year:
+        <input type="number" id="year"><br><br>
+
+        <input type="submit" value="Add Book">
+    </form>
+
+    <br>
+
+    <table border="1" id="bookTable">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+    </table>
+
+</body>
+</html>

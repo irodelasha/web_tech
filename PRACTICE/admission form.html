@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <title>University Admission Form</title>
+
+    <style>
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      fieldset {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>University Admission Form</h2>
+
+    <form>
+     
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <table>
+          <tr>
+            <td>Full Name <span style="color: red">*</span></td>
+            <td>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                required
+                maxlength="50"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Email <span style="color: red">*</span></td>
+            <td>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Date of Birth</td>
+            <td>
+              <input type="date" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" name="gender" value="Male" /> Male
+              <input type="radio" name="gender" value="Female" /> Female
+            </td>
+          </tr>
+
+          <tr>
+            <td>Address</td>
+            <td>
+              <textarea
+                rows="4"
+                cols="20"
+                placeholder="Enter your address"
+              ></textarea>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend>Academic Information</legend>
+
+        <table>
+          <tr>
+            <td>SSC Result</td>
+            <td>
+              <input
+                type="text"
+                placeholder="Enter SSC GPA"
+                maxlength="5"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>HSC Result</td>
+            <td>
+              <input
+                type="text"
+                placeholder="Enter HSC GPA"
+                maxlength="5"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Preferred Department</td>
+            <td>
+              <select>
+                <option>CSE</option>
+                <option>EEE</option>
+                <option>BBA</option>
+                <option>IPE</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Interests</td>
+            <td>
+              <input type="checkbox" /> Programming
+              <input type="checkbox" /> Networking
+              <input type="checkbox" /> AI
+            </td>
+          </tr>
+
+          <tr>
+            <td>Upload Documents</td>
+            <td>
+              <input type="file" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+   
+      <table>
+        <tr>
+          <td>
+            <input type="submit" value="Submit" />
+          </td>
+          <td>
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

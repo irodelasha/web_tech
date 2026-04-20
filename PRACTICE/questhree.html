@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Validation</title>
+
+    <script>
+        function checkAge() {
+            let age = document.getElementById("age").value;
+            let message = document.getElementById("msg");
+
+            age = parseInt(age);
+
+            if (age < 40) {
+                message.innerHTML = "To be a part of the community, you need to at least 40";
+                message.style.color = "black";
+            }
+            else if (age >= 40 && age <= 50) {
+                message.innerHTML = "You are the youngsters of this community";
+                message.style.color = "black";
+            }
+            else if (age > 50) {
+                message.innerHTML = "Top level members of the group";
+                message.style.color = "red";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Community Membership</h2>
+
+    <form>
+        Enter Age:
+        <input type="number" id="age" onkeyup="checkAge()"><br><br>
+
+        <p id="msg"></p>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

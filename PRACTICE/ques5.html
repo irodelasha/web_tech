@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Background</title>
+
+    <script>
+        function changeColor() {
+            // Generate random RGB values
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+
+            // Create color
+            let color = "rgb(" + r + "," + g + "," + b + ")";
+
+            // Apply to body
+            document.body.style.backgroundColor = color;
+        }
+
+        // Add event listener after page loads
+        window.onload = function() {
+            document.getElementById("btn").addEventListener("click", changeColor);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Background Color Changer</h2>
+
+    <button id="btn">Change Background</button>
+
+</body>
+</html>
