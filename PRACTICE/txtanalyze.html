@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <title>Text Analyzer</title>
+
+    <style>
+      h2 {
+        text-align: center;
+      }
+
+      .box {
+        width: 400px;
+        margin: auto;
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      textarea {
+        width: 380px;
+        height: 120px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 5px 10px;
+      }
+
+      .result {
+        margin-top: 15px;
+        border: 1px solid gray;
+        padding: 10px;
+      }
+<<<<<<< HEAD
+      </style>
+       <script>
+      console.log("Text Analyzer Connected");
+
+        function analyzeText() {
+        const text = document.getElementById("inputText").value;
+
+        
+=======
+    </style>
+
+    <script>
+      console.log("Text Analyzer Connected");
+
+      function analyzeText() {
+        const text = document.getElementById("inputText").value;
+
+        // check empty input
+>>>>>>> c5ddeaa60d2688bd7d817625d7642221a7691ad2
+        if (!text) {
+          document.getElementById("result").innerHTML =
+            "Please enter some text!";
+          return;
+        }
+<<<<<<< HEAD
+         const charCount = text.length;
+=======
+
+        // Character count
+        const charCount = text.length;
+
+        // Word count (handle multiple spaces)
+>>>>>>> c5ddeaa60d2688bd7d817625d7642221a7691ad2
+        const words = text.trim().split(" ");
+        let wordCount = 0;
+
+        for (let i = 0; i < words.length; i++) {
+          if (words[i] != "") {
+            wordCount++;
+          }
+        }
+
+<<<<<<< HEAD
+        
+        const reversedText = text.split("").reverse().join("");
+=======
+        // Reverse text
+        const reversedText = text.split("").reverse().join("");
+
+        // Show result
+>>>>>>> c5ddeaa60d2688bd7d817625d7642221a7691ad2
+        document.getElementById("result").innerHTML =
+          "Total Characters: " +
+          charCount +
+          "<br/>Total Words: " +
+          wordCount +
+          "<br/>Reversed Text: " +
+<<<<<<< HEAD
+          reversedText; }
+    </script>
+    </head>
+
+    <body>
+=======
+          reversedText;
+      }
+    </script>
+  </head>
+
+  <body>
+>>>>>>> c5ddeaa60d2688bd7d817625d7642221a7691ad2
+    <h2>Text Analyzer Tool</h2>
+
+    <div class="box">
+      <textarea
+        id="inputText"
+        placeholder="Enter your paragraph here..."
+      ></textarea>
+
+      <br />
+
+      <button onclick="analyzeText()">Analyze Text</button>
+
+      <div id="result" class="result"></div>
+<<<<<<< HEAD
+     </div>
+     </body>
+     </html>
+
+     
+=======
+    </div>
+  </body>
+</html>
+>>>>>>> c5ddeaa60d2688bd7d817625d7642221a7691ad2

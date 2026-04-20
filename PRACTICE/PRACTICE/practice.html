@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <title>My Practice Page</title>
+
+    <style>
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      h1 {
+        color: blueviolet;
+        text-align: center;
+        text-decoration: overline;
+      }
+
+      p {
+        color: red;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+
+      /* BOX CLASS */
+      .box {
+        border: 2px solid black;
+        padding: 15px;
+        margin: 15px;
+      }
+
+      .card {
+        width: 200px;
+        padding: 20px;
+        border: 2px solid saddlebrown;
+        margin: 20px;
+      }
+
+      img {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="box">
+      <h1>Welcome to My Practice Page</h1>
+    </header>
+
+    <!-- NAV -->
+    <nav class="box">
+      <a href="#">Home</a> |
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section class="box">
+      <h2>About Me</h2>
+      <p>I am Rodela</p>
+      <p>Sharmin</p>
+
+      <a href="https://example.com" target="_blank">
+        Visit Example Website
+      </a>
+    </section>
+
+    <!-- IMAGE SECTION -->
+    <section class="box">
+      <h2>Images</h2>
+
+      <img
+        src="https://fastly.picsum.photos/id/10/2500/1667.jpg"
+        height="200"
+        width="200"
+      />
+
+      <br />
+
+      <img src="images/photo.jpg" height="200" width="200" />
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="box">
+      <h2>Login Form</h2>
+
+      <form>
+        <table>
+          <tr>
+            <td>Email:</td>
+            <td>
+              <input type="email" placeholder="Enter email" required />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Password:</td>
+            <td>
+              <input type="password" placeholder="Enter password" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Gender:</td>
+            <td>
+              <input type="radio" name="gender" /> Male
+              <input type="radio" name="gender" /> Female
+            </td>
+          </tr>
+
+          <tr>
+            <td>Date of Birth:</td>
+            <td>
+              <input type="date" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Subscribe:</td>
+            <td>
+              <input type="checkbox" /> Newsletter
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              <button type="submit">Login</button>
+              <input type="reset" value="Reset" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </section>
+
+    <!-- CARD SECTION -->
+    <section class="box">
+      <h2>Card Section</h2>
+
+      <div class="card">
+        <h3>Simple Card</h3>
+        <p>This is inside a div container</p>
+      </div>
+
+      <p>
+        This is a
+        <span style="background-color: yellow">highlighted</span>
+        word using span
+      </p>
+    </section>
+
+    <!-- SIDEBAR -->
+    <aside class="box">
+      <p>Related links or ads</p>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="box">
+      <p>Copyright © 2026</p>
+    </footer>
+  </body>
+</html>
